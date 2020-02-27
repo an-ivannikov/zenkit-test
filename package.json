@@ -4,7 +4,8 @@
   "main": "./ZenkitCodeSamples.js",
   "license": "MIT",
   "scripts": {
-    "start": "node ./ZenkitCodeSamples.js"
+    "start": "node ./ZenkitCodeSamples.js",
+    "challenge": "node ./ZenkitCodeSamplesChallenge.js"
   },
   "dependencies": {
     "bluebird": "^3.7.2",
