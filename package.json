@@ -1,0 +1,14 @@
+{
+  "name": "zenkit-test",
+  "version": "1.0.0",
+  "main": "./ZenkitCodeSamples.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ./ZenkitCodeSamples.js"
+  },
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "lodash": "^4.17.15",
+    "promise-flow-control": "^1.0.6"
+  }
+}
