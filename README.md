@@ -20,7 +20,11 @@ How would you adjust the code?
 **Questions:**
   - Do you think synchronizing the different resources could be done in parallel? 
 If so, how would you do it and would there be a downside?
-    - **A:** 
+    - **A:** I think that synchronization of different resources should be done in parallel. 
+Usually in the WEB App, I use redux.js to store state and to synchronize data consumers. 
+I have not yet defined a library for myself that will initiate the download of updates. 
+In react.js, the components themselves usually do this. 
+Data can be downloaded via REST or through JSON-RPC (The choice depends on the specifics of the project). Usually REST is used for highly loaded web services because of the possibility of caching data on the backend.
   - Why use _.get(err, ['data', 'error', 'code']) if you could simply do err.data.error.code?
 And can you think of a better name for err here?
     - **A:** A simple method of getting the value (`err.data.error.code`) will result in a fails and does not allow to predefine the default. We must first check the existence of the `err.data` and `err.data.error` objects.
