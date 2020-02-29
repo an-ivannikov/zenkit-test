@@ -137,7 +137,12 @@ var syncList = function (params) {
           return synchronizeElements(listId);
         })
         .then(function () {
-          // TODO: Add created_at, updated_at columns for category sort orders 
+          var shouldSyncСategorySortOrders = timestamps.categorySortOrders === undefined ||
+            _.isNil(_.get(synchronization, ['nextСategorySortOrdersWatermark', 'updated_at'])) ||
+            moment(timestamps.categorySortOrders).isAfter(moment(synchronization.nextСategorySortOrdersWatermark.updated_at));
+          if (shouldSyncСategorySortOrders === false || timestamps.categorySortOrders === null) {
+            return;
+          }
           return synchronizeCategorySortOrders(listId);
         })
         .then(function () {

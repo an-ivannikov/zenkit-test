@@ -14,17 +14,19 @@ If we set it to 1 then execution will occur through a call to a single instance 
 Let's say your task was to make sure updateExceededDays fails as soon sending out any email fails.
 How would you adjust the code?
     - **A:** I just need to throw that error that we caught earlier in `catch`.
-`throw new Error(err);`
+`throw new Error(err);`. SEE IN "ZenkitCodeSamplesChallenge.js".
 
 ## Some client side code
 **Questions:**
-  - Do you think synchronizing the different resources could be done in parallel? 
+  - Do you think synchronizing the different resources could be done in parallel?
 If so, how would you do it and would there be a downside?
-    - **A:** I think that synchronization of different resources should be done in parallel. 
-Usually in the WEB App, I use redux.js to store state and to synchronize data consumers. 
-I have not yet defined a library for myself that will initiate the download of updates. 
-In react.js, the components themselves usually do this. 
-Data can be downloaded via REST or through JSON-RPC (The choice depends on the specifics of the project). Usually REST is used for highly loaded web services because of the possibility of caching data on the backend.
+    - **A:** I think that synchronization of different resources should be done in parallel.
+Usually in the WEB App, I use redux.js to store state and to synchronize data consumers.
+I have not yet defined a library for myself that will initiate the download of updates.
+In react.js, the components themselves usually do this.
+Data can be downloaded via REST or through JSON-RPC (The choice depends on the specifics of the project).
+Usually REST is used for highly loaded web services because of the possibility of caching data on the backend. 
+Perhaps I did not understand your question.
   - Why use _.get(err, ['data', 'error', 'code']) if you could simply do err.data.error.code?
 And can you think of a better name for err here?
     - **A:** A simple method of getting the value (`err.data.error.code`) will result in a fails and does not allow to predefine the default. We must first check the existence of the `err.data` and `err.data.error` objects.
@@ -39,3 +41,4 @@ otherwise the operation will be stopped by an error.
 **Challenge:**
 Imagine we added the created_at and updated_at columns for "categorySortOrders" as the TODO suggests.
 Please adjust the code in a way that prevents synchronizing this resource if there was no change.
+  - A: SEE IN "ZenkitCodeSamplesChallenge.js"
