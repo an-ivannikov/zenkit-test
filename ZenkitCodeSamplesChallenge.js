@@ -85,7 +85,7 @@ const updateExceededDays = params => {
 
 /**
  * Questions:
- * [SEE LICENSE IN "README.md"](/README.md)
+ * SEE IN "README.md"
  */
 
 
@@ -189,5 +189,5 @@ var syncList = function (params) {
 
 /**
  * Questions:
- * [SEE LICENSE IN "README.md"](/README.md)
+ * SEE LICENSE IN "README.md"
  */
